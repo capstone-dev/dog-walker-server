@@ -1,0 +1,11 @@
+-#!/bin/sh      
+ssh ubuntu@54.180.115.101 <<EOF        
+ cd dog-walker-server
+ git pull 
+ cd app-server
+ npm install --production
+ cd ../node-project
+ npm install --production
+ pm2 restart all
+ exit
+EOF
