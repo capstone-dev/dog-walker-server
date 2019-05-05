@@ -20,6 +20,7 @@ console.log("here1");
 //if(err)throw err;
 if(rows[1]){
 res.json(rows[1]);
+res.send("test complete");
 console.log("here2");
 console.log(rows[0])
 //console.log(rows[0])
