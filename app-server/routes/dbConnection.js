@@ -9,6 +9,9 @@ const mysql = require('mysql')
      database : 'capswdb'
  });
 
-connection.connect();
+connection.connect(function(err){
+    if(err){console.error('mysql connection error :'+err);
+    }
+});
 
 module.exports=connection;

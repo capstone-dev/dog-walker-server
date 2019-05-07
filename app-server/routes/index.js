@@ -11,16 +11,17 @@ router.get('/', function(req, res, next) {
 */
 
 // DATABASE SETTING
-var connection=require('./dbConnection');
+var connection=require('./testdbConnection');
 router.get('/',function(req, res, next) {
 
 var query=connection.query('select * from user',
 function(err,rows){
-console.log("here1");
-//if(err)throw err;
+
+if(err)throw err;
+
 if(rows[0]){
 res.json(rows[0]);
-console.log("here2");
+
 console.log(rows[0])
 //console.log(rows[0])
 
