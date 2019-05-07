@@ -3,9 +3,10 @@ var router = express.Router()
 
 // DATABASE SETTING
 var connection=require('./dbConnection');
+
 router.get('/',function(req, res, next) {
 
-    var query = connection.query('select * from thread',
+    var query = connection.query('select * from comment',
         function(err,rows){
             if(err)throw err;
 
@@ -14,7 +15,6 @@ router.get('/',function(req, res, next) {
             }
             else{
                 console.log("no rows")
-
             }
 
         })
@@ -22,16 +22,13 @@ router.get('/',function(req, res, next) {
     router.post('/', function(req, res){
 
         var body = req.body;
-        var userThread = {
+        var userComment = {
             'userId' : req.body.userId,
-            'threadTitle' : req.body.threadTitle,
-            'userLocation' : req.body.userLocation,
-            'threadNumber' : req.body.threadNumber,
-            'threadContent' : req.body.threadContent,
-            'chatroomUserName' : req.body.chatroomUserName
+            'commentContent' : req.body.commentContent,
+            'threadId' : req.body.threadId,
         };
         //execute sql
-        connection.query("INSERT INTO thread set ?", userThread,
+        connection.query("INSERT INTO comment set ?", userComment,
             function (error, result, fields){
 
                 if(error){
@@ -40,8 +37,7 @@ router.get('/',function(req, res, next) {
                 }
                 else {
                     //execution success
-
-                    res.send('success create userThread');
+                    res.send('success create comment');
                 }
             })
     })
