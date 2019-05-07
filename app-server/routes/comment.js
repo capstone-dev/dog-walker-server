@@ -11,7 +11,7 @@ router.get('/',function(req, res, next) {
     if(Object.keys(req.query).length==0)
         sql='select * from comment'
     else{//키가 threadId인 쿼리스트링 존재
-        sql='select * from comment where' +req.query.threadId;
+        sql='select * from comment where threadId=' +req.query.threadId;
     }
     var query = connection.query(sql,
         function(err,rows){
