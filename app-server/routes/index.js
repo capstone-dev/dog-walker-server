@@ -11,10 +11,10 @@ router.get('/', function(req, res, next) {
 */
 
 // DATABASE SETTING
-var connection=require('./testdbConnection');
+var connection=require('./dbConnection');
 router.get('/',function(req, res, next) {
 
-var query=connection.query('select * from user',
+var query=connection.query('select * from thread',
 function(err,rows){
 
 if(err)throw err;
