@@ -10,18 +10,17 @@ router.get('/',function(req, res, next) {
     //쿼리스트링 존재안할 시 전체데이터 가져옴
     if(Object.keys(req.query).length==0)
         sql='select * from comment'
-    else{//키가 threadId인 쿼리스트링 존재
+    else{//threadId에 해당하는 comment 가져옴
         sql='select * from comment where threadId=' +req.query.threadId;
     }
     var query = connection.query(sql,
         function(err,rows){
             if(err)throw err;
-
-            if(rows){
+            if(rows[0]){
                 res.send(rows)
             }
             else{
-                console.log("no rows")
+                res.send('no rows in db');
             }
 
         })

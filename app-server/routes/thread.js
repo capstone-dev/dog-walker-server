@@ -9,10 +9,10 @@ router.get('/',function(req, res, next) {
         function (err, rows) {
             if (err) throw err;
 
-            if (rows) {
+            if (rows[0]) {
                 res.send(rows)
             } else {
-                console.log("no rows")
+                res.send('no rows in db');
             }
         })
 
