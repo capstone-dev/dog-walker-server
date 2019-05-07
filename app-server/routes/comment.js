@@ -6,7 +6,14 @@ var connection=require('./dbConnection');
 
 router.get('/',function(req, res, next) {
 
-    var query = connection.query('select * from comment',
+    var sql="";
+    //쿼리스트링 존재안할 시 전체데이터 가져옴
+    if(Object.keys(req.query).length==0)
+        sql='select * from comment'
+    else{//키가 threadId인 쿼리스트링 존재
+        sql='select * from comment where' +req.query.threadId;
+    }
+    var query = connection.query(sql,
         function(err,rows){
             if(err)throw err;
 
@@ -18,6 +25,12 @@ router.get('/',function(req, res, next) {
             }
 
         })
+
+
+
+})
+
+
 
     router.post('/', function(req, res){
 
@@ -41,6 +54,6 @@ router.get('/',function(req, res, next) {
                 }
             })
     })
-})
+
 
 module.exports = router;

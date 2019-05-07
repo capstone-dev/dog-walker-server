@@ -3,24 +3,22 @@ var router = express.Router()
 
 // DATABASE SETTING
 var connection=require('./dbConnection');
+
 router.get('/',function(req, res, next) {
-
     var query = connection.query('select * from thread',
-        function(err,rows){
-            if(err)throw err;
+        function (err, rows) {
+            if (err) throw err;
 
-            if(rows){
+            if (rows) {
                 res.send(rows)
-            }
-            else{
+            } else {
                 console.log("no rows")
-
             }
-
         })
 
-    router.post('/', function(req, res){
+})
 
+    router.post('/', function(req, res){
         var body = req.body;
         var userThread = {
             'userId' : req.body.userId,
@@ -45,6 +43,7 @@ router.get('/',function(req, res, next) {
                 }
             })
     })
-})
+
+
 
 module.exports = router;
