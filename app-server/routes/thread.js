@@ -46,7 +46,7 @@ router.get('/',function(req, res, next) {
                 else {
                     //execution success
                     res.send('success create userThread');
-                    logger.info(userThread+" insertion success");
+                    logger.info(JSON.stringify(userThread)+" insertion success");
                 }
             })
     })

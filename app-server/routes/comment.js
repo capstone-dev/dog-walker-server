@@ -55,7 +55,7 @@ router.get('/',function(req, res, next) {
                 else {
                     //execution success
                     res.send('success create comment');
-                    logger.info(userComment+" insertion success");
+                    logger.info(JSON.stringify(userComment)+" insertion success");
                 }
             })
     })
