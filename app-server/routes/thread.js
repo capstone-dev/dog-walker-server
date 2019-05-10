@@ -2,13 +2,19 @@ var express = require('express')
 var router = express.Router()
 
 // DATABASE SETTING
-var connection=require('./dbConnection');
+var connection=require('../configurations/dbConnection');
+
+//LOGGER SETTING
+const logger=require('../configurations/logConfiguration');
+
 
 router.get('/',function(req, res, next) {
     var query = connection.query('select * from thread',
         function (err, rows) {
-            if (err) throw err;
-
+            if (err) {
+                res.send('err : ' + err);
+                throw err;
+            }
             if (rows[0]) {
                 res.send(rows)
             } else {
@@ -35,11 +41,12 @@ router.get('/',function(req, res, next) {
                 if(error){
                     //에러 발생시
                     res.send('err : ' + error)
+                    throw err;
                 }
                 else {
                     //execution success
-
                     res.send('success create userThread');
+                    logger.info(userThread+" insertion success");
                 }
             })
     })

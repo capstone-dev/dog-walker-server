@@ -11,7 +11,10 @@ router.get('/', function(req, res, next) {
 */
 
 // DATABASE SETTING
-var connection=require('./dbConnection');
+var connection=require('../configurations/dbConnection');
+//LOGGER SETTING
+const logger=require('../configurations/logConfiguration');
+
 router.get('/',function(req, res, next) {
 
 var query=connection.query('select * from thread',

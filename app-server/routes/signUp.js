@@ -2,8 +2,9 @@ var express = require('express')
 var router = express.Router()
 
 // DATABASE SETTING
-var connection=require('./dbConnection');
-
+var connection=require('../configurations/dbConnection');
+//LOGGER SETTING
+const logger=require('../configurations/logConfiguration');
 
 router.get('/',function(req, res, next) {
 
