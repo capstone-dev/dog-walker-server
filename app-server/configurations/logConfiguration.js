@@ -1,21 +1,14 @@
 const winston = require('winston');
 const winstoneDaily = require('winston-daily-rotate-file');
 const {createLogger, format, transports} = require('winston');
-const fs = require('fs');
-const logDir = 'log';
 const path = require('path');
-
-
-if (!fs.existsSync(logDir)) {
-    fs.mkdirSync(logDir);
-}
 
 const infoLogFile = path.join(__dirname, '../log/info', '/%DATE%-logfile.log')
 const exceptionLogFilen = path.join(__dirname, '../log/exception', '/%DATE%-logfile.log')
 
 const tsFormat = format.combine(
     format.timestamp({
-        format: 'YYYY-MM-DD-HH:mm' // Optional for choosing your own timestamp format.
+        format: 'YYYY-MM-DD HH:mm' // Optional for choosing your own timestamp format.
     }),
     format.json()
 )
