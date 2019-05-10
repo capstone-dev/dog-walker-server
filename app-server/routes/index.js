@@ -5,7 +5,7 @@ var router = express.Router();
 const logger=require('../configurations/logConfiguration');
 
 router.get('/',function(req, res, next) {
-    res.sendFile(__dirname+"/public/main.html")
+    res.sendFile(__dirname+"../views/main.html")
 });
 
 module.exports = router;
