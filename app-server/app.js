@@ -9,6 +9,7 @@ var commentRouter=require('./routes/comment');
 var signUpRouter=require('./routes/signUp');
 
 var app = express();
+var path= require('path');
 
 //LOGGER SETTING
 const logger=require('./configurations/logConfiguration');
