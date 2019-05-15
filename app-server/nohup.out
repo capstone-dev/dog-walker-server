@@ -1,0 +1,146 @@
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [32m200 [0m10.102 ms - 205[0m
+[0mGET /favicon.ico [33m404 [0m221.503 ms - 1052[0m
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m2.759 ms - -[0m
+
+> app-server@0.0.0 start /home/ubuntu/app-server
+> node ./bin/www
+
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m10.350 ms - -[0m
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m2.158 ms - -[0m
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m1.786 ms - -[0m
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m1.705 ms - -[0m
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m1.651 ms - -[0m
+here1
+here2
+RowDataPacket {
+  id: 1,
+  name: 'keesy21',
+  password: '1234',
+  phone_number: '010-1111-1111',
+  address: '경기도',
+  dog_name: '쫑이',
+  dog_species: '푸들',
+  dog_image: 'C:/',
+  license_image: 'C:',
+  license_number: '123-456' }
+[0mGET / [36m304 [0m1.666 ms - -[0m
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/ubuntu/app-server/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/home/ubuntu/app-server/node_modules/mysql/lib/Connection.js:97:28)
+    at Socket.<anonymous> (/home/ubuntu/app-server/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:194:15)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+Emitted 'error' event at:
+    at Connection._handleProtocolError (/home/ubuntu/app-server/node_modules/mysql/lib/Connection.js:426:8)
+    at Protocol.emit (events.js:189:13)
+    at Protocol._delegateError (/home/ubuntu/app-server/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.end (/home/ubuntu/app-server/node_modules/mysql/lib/protocol/Protocol.js:116:8)
+    at Socket.<anonymous> (/home/ubuntu/app-server/node_modules/mysql/lib/Connection.js:97:28)
+    [... lines matching original stack trace ...]
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! app-server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the app-server@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2019-05-03T20_37_18_891Z-debug.log
