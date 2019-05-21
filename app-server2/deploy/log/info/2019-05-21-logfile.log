@@ -1,0 +1,4 @@
+{"message":"{\"userId\":\"1\",\"commentContent\":\"test!!\",\"threadId\":\"1\"} insertion success","level":"info","timestamp":"2019-05-21 15:20"}
+{"message":"{\"userId\":\"2\",\"threadTitle\":\"제목\",\"userLocation\":\"부산\",\"threadNumber\":\"2\",\"threadContent\":\"내용\",\"chatroomUserName\":\"hat\"} insertion success","level":"info","timestamp":"2019-05-21 16:21"}
+{"message":"{\"userId\":\"1\",\"threadTitle\":\"ㄴㄴㅁ\",\"userLocation\":\"온\",\"threadNumber\":\"1\",\"threadContent\":\"ㅁㄴ\",\"chatroomUserName\":\"테스트\"} insertion success","level":"info","timestamp":"2019-05-21 16:27"}
+{"message":"{\"userId\":\"2\",\"threadTitle\":\"제목\",\"userLocation\":\"부산\",\"threadNumber\":\"2\",\"threadContent\":\"내용\",\"chatroomUserName\":\"hat\"} insertion success","level":"info","timestamp":"2019-05-21 16:38"}

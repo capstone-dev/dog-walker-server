@@ -1,0 +1,19 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 100
+    },
+    "auditLog": "/home/ubuntu/deploy/log/exception/.96a5e31d08e60d86253867cda5524368fabf4894-audit.json",
+    "files": [
+        {
+            "date": 1558362376231,
+            "name": "/home/ubuntu/deploy/log/exception/2019-05-20-logfile.log",
+            "hash": "266b89ff98890c698b153973df3fdd92"
+        },
+        {
+            "date": 1558416741425,
+            "name": "/home/ubuntu/deploy/log/exception/2019-05-21-logfile.log",
+            "hash": "dc6ce18661def27b352dc44ccbede0e3"
+        }
+    ]
+}
